@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.aaroninjava.opcalt.inP">
+    tools:context="com.example.aaroninjava.opcalt.outP">
 
 
     <LinearLayout
@@ -30,37 +30,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_CP1"
+                    android:id="@+id/tvoutP_CP"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"
                     android:text="種類: 買、賣權"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-                <ToggleButton
-                    android:id="@+id/tBt_CP"
-                    android:layout_width="@android:dimen/notification_large_icon_height"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-
-                    android:text="ToggleButton"
-                    android:textOff="CALL"
-                    android:textOn="PUT" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
                 <TextView
-                    android:id="@+id/tvinP_CP2"
+                    android:id="@+id/tvoutP_CP2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="點擊右邊按鈕 可切換:  買權Call 、賣權Put" />
+                    android:text="Call"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -76,41 +60,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_S1"
+                    android:id="@+id/tvoutP_S"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"
                     android:text="標的價格"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-                <EditText
-                    android:id="@+id/edinP_S"
-                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-                    android:layout_width="64dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="10"
-                    android:background="@null"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="11000"
-                    android:inputType="numberDecimal"
-                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                    tools:background="null"
-                    tools:layout_width="50dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
                 <TextView
-                    android:id="@+id/tvinP_S2"
+                    android:id="@+id/tvoutP_S2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="到期履約的標的價格，台指選擇權標的為加權指數" />
+                    android:text="11000"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -126,41 +90,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_K"
+                    android:id="@+id/tvoutP_K"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"
                     android:text="履約價"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-                <EditText
-                    android:id="@+id/edinP_K"
-                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-                    android:layout_width="64dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="10"
-                    android:background="@null"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="11050"
-                    android:inputType="numberDecimal"
-                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                    tools:background="null"
-                    tools:layout_width="50dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
                 <TextView
-                    android:id="@+id/tvinP_K2"
+                    android:id="@+id/tvoutP_K2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Strike Price" />
+                    android:text="11050"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -176,41 +120,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_T1"
+                    android:id="@+id/tvoutP_T"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"
                     android:text="距離到期天數"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-                <EditText
-                    android:id="@+id/edinP_T"
-                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-                    android:layout_width="64dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="10"
-                    android:background="@null"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="6"
-                    android:inputType="numberDecimal"
-                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                    tools:background="null"
-                    tools:layout_width="50dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
                 <TextView
-                    android:id="@+id/tvinP_T2"
+                    android:id="@+id/tvoutP_T2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="需考慮不含假日的實際可交易日" />
+                    android:text="6"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -226,41 +150,21 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_V1"
+                    android:id="@+id/tvoutP_Pr"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"
-                    android:text="波動率 %"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-                <EditText
-                    android:id="@+id/edinP_V"
-                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-                    android:layout_width="64dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:background="@null"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="20"
-                    android:inputType="numberDecimal"
-                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                    tools:background="null"
-                    tools:layout_width="50dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
+                    android:text="權利金價格"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
                 <TextView
-                    android:id="@+id/tvinP_V2"
+                    android:id="@+id/tvoutP_Pr2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="可用標的價的30天歷史波動率或過去經驗值代入" />
+                    android:text="10"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -276,41 +180,85 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_r1"
+                    android:id="@+id/tvoutP_r"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"
                     android:text="無風險利率%"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
 
-                <EditText
-                    android:id="@+id/edinP_r"
-                    style="@style/Widget.AppCompat.Light.AutoCompleteTextView"
-                    android:layout_width="64dp"
+                <TextView
+                    android:id="@+id/tvoutP_r2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="10"
-                    android:background="@null"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="1.75"
-                    android:inputType="numberDecimal"
-                    android:textAppearance="@android:style/TextAppearance.Material.Headline"
-                    tools:background="null"
-                    tools:layout_width="50dp" />
+                    android:layout_weight="1"
+                    android:text="1.75 %"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
             </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_r2"
+                    android:id="@+id/tvoutP_Out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:text="計算結果"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+                <TextView
+                    android:id="@+id/tvoutP_Out2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="可用央行基本利率或台銀短天期存款利率" />
+                    android:text=""
+                    android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvoutP_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:text="隱含波動率"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                <TextView
+                    android:id="@+id/tvoutP_IV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=" 19.91%"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
             </LinearLayout>
 
         </LinearLayout>
@@ -326,20 +274,20 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_Pr1"
+                    android:id="@+id/tvoutP_Delta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"
-                    android:text="權利金理論價"
+                    android:text="Delta"
                     android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-                <Button
-                    android:id="@+id/btinP_Cal"
-                    android:layout_width="@android:dimen/notification_large_icon_height"
+                <TextView
+                    android:id="@+id/tvoutP_Delta2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="30"
-                    android:onClick="clickinP"
-                    android:text="計算" />
+                    android:layout_weight="1"
+                    android:text="0.49"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
             </LinearLayout>
 
@@ -350,19 +298,143 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/tvinP_Pr2"
+                    android:id="@+id/tvoutP_Delta3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="點擊右邊按鈕，計算理論價格與風險敏感性係數" />
+                    android:text="對標的價格微分，標的價格每漲 1，權利金增加的大小" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvoutP_Vega"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:text="Vega"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                <TextView
+                    android:id="@+id/tvoutP_Vega2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1.21"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvoutP_Vega3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="對波動率微分，每增加1%，權利金增加的大小" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvoutP_theta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:text="Theta"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+                <TextView
+                    android:id="@+id/tvoutP_theta2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="-1.05"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvoutP_theta3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="對到期時間微分，接近到期日，權利金每天減少的大小" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:onClick="click1"
+                    android:text="Button" />
+
+                <TextView
+                    android:id="@+id/tvBS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="100"
+                    android:text="BS-Test"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
             </LinearLayout>
 
         </LinearLayout>
 
 
-
-
     </LinearLayout>
+
 
 
 

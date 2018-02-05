@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".inP" />
-        <activity android:name=".inV"></activity>
+        <activity android:name=".inV" />
+        <activity android:name=".outP"></activity>
     </application>
 
 </manifest>
