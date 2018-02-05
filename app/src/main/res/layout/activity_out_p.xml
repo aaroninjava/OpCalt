@@ -406,14 +406,14 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button_test"
+                    android:id="@+id/buttonoutP_test"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:onClick="click1"
                     android:text="Button" />
 
                 <TextView
-                    android:id="@+id/tvBS"
+                    android:id="@+id/tvoutP_BS"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="100"

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".inP" />
         <activity android:name=".inV" />
-        <activity android:name=".outP"></activity>
+        <activity android:name=".outP" />
+        <activity android:name=".outV"></activity>
     </application>
 
 </manifest>

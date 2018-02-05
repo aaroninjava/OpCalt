@@ -1,7 +1,9 @@
 package com.example.aaroninjava.opcalt;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 public class inV extends AppCompatActivity {
 
@@ -12,5 +14,9 @@ public class inV extends AppCompatActivity {
 
     }
 
+    public void clickinV(View v) {
+        Intent it = new Intent(inV.this, outV.class);
+        startActivity(it);
+    }
 
 }

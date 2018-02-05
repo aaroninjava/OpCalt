@@ -5,17 +5,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class outP extends AppCompatActivity {
+public class outV extends AppCompatActivity {
 
     TextView tv;
     DSa dsa=new DSa();
     double Pr,S,K,T,sigma,r,y;
     String CP;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_out_p);
+        setContentView(R.layout.activity_out_v);
+
 
         String x1;
 
@@ -36,17 +38,16 @@ public class outP extends AppCompatActivity {
         //x1=dsa.getTs(b.call());
         System.out.println("Call = "+x1);
 //x1="123";
-        tv = findViewById(R.id.tvoutP_BS);
+        tv = findViewById(R.id.tvoutV_BS);
         tv.setText(x1);
 
     }
 
-
-
     public void click1(View v)
     {
         String x1;
-        tv = findViewById(R.id.tvoutP_BS);
+        tv = findViewById(R.id.tvoutV_BS);
+
 
         //Date date=new Date();
         //System.out.println(date.toString());
@@ -54,5 +55,6 @@ public class outP extends AppCompatActivity {
         //tv.setText(date.toString());
         //tv.setText(x1);
     }
+
 
 }
