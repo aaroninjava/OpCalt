@@ -1,5 +1,6 @@
 package com.example.aaroninjava.opcalt;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +8,12 @@ import android.widget.TextView;
 
 public class outV extends AppCompatActivity {
 
-    TextView tv;
+    TextView tvBS;
+    TextView tvV;
+    TextView tvDelta;
+    TextView tvVega;
+    TextView tvTheta;
+
     DSa dsa=new DSa();
     double Pr,S,K,T,sigma,r,y;
     String CP;
@@ -18,35 +24,69 @@ public class outV extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_out_v);
 
+        TextView tvS = findViewById(R.id.tvoutV_S2);
+        TextView tvK = findViewById(R.id.tvoutV_K2);
+        TextView tvT = findViewById(R.id.tvoutV_T2);
+        TextView tvPr = findViewById(R.id.tvoutV_Pr2);
+        TextView tvr = findViewById(R.id.tvoutV_r2);
 
+        Intent it = getIntent();
+
+        String strS = it.getStringExtra("S");
+        String strK = it.getStringExtra("K");
+        String strT = it.getStringExtra("T");
+        String strPr = it.getStringExtra("Pr");
+        String strr = it.getStringExtra("r");
+
+        tvS.setText(strS);
+        tvK.setText(strK);
+        tvT.setText(strT);
+        tvPr.setText(strPr);
+        tvr.setText(strr);
+
+        String xIV,xDelta,xVega,xTheta;
         String x1;
 
         CP="C";
-        Pr=1.732;
+
         Pr=0.84;
+        Pr=dsa.getDs(strPr);
+
         S=100;
+        S=dsa.getDs(strS);
+
         K=110;
+        K=dsa.getDs(strK);
+
         T=0.1;
+        T=dsa.getDs(strT);
+
         r=0.01;
+        r=dsa.getDs(strr);
         y=0;
+
         sigma=0.3;
 
         BSa b = new BSa(CP,Pr,S,K,T,sigma,r,y);
 //DSa dsa=new DSa();
-        x1=dsa.getTs(b.iv1());
+        xIV=dsa.getTs(b.iv1());
+        xDelta=dsa.getTs(b.delta(CP));
+        xVega=dsa.getTs(b.vega());
+        xTheta=dsa.getTs(b.theta(CP));
+
 //System.out.println("call"+b.call());
         //x1=dsa.getTs(b.call());
-        System.out.println("Call = "+x1);
+        //System.out.println("Call = "+x1);
 //x1="123";
-        tv = findViewById(R.id.tvoutV_BS);
-        tv.setText(x1);
+        tvBS = findViewById(R.id.tvoutV_BS);
+        tvBS.setText(xIV);
 
     }
 
     public void click1(View v)
     {
         String x1;
-        tv = findViewById(R.id.tvoutV_BS);
+        tvBS = findViewById(R.id.tvoutV_BS);
 
 
         //Date date=new Date();

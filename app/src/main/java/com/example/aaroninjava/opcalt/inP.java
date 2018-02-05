@@ -23,12 +23,15 @@ public class inP extends AppCompatActivity {
         EditText edT = findViewById(R.id.edinP_T);
         EditText edV = findViewById(R.id.edinP_V);
         EditText edr = findViewById(R.id.edinP_r);
+
         Intent it = new Intent(inP.this, outP.class);
+
         it.putExtra("S", edS.getText().toString());
         it.putExtra("K", edK.getText().toString());
         it.putExtra("T", edT.getText().toString());
         it.putExtra("V", edV.getText().toString());
         it.putExtra("r", edr.getText().toString());
+
         startActivity(it);
 
     }
