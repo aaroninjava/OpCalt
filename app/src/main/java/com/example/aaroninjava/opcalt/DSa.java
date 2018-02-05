@@ -11,7 +11,7 @@ public class DSa {
 
     String ts;
     double ds;
-    DecimalFormat df = new DecimalFormat("##.0000");
+    DecimalFormat df = new DecimalFormat("##.000");
 
     DSa(){}
 

@@ -8,7 +8,12 @@ import android.widget.TextView;
 
 public class outP extends AppCompatActivity {
 
-    TextView tv;
+    TextView tvBS;
+    TextView tvPr;
+    TextView tvDelta;
+    TextView tvVega;
+    TextView tvTheta;
+
     DSa dsa=new DSa();
     double Pr,S,K,T,sigma,r,y;
     String CP;
@@ -35,27 +40,47 @@ public class outP extends AppCompatActivity {
         tvV.setText(strV);
         tvr.setText(strr);
 
-        String x1;
+        String xPr,xDelta,xVega,xTheta;
 
         CP="C";
-        Pr=1.732;
+
         Pr=0.84;
+
         S=100;
+        S=dsa.getDs(strS);
+
         K=110;
+        K=dsa.getDs(strK);
         T=0.1;
+        T=dsa.getDs(strT);
         r=0.01;
+        r=dsa.getDs(strr);
         y=0;
+
         sigma=0.3;
+        sigma=dsa.getDs(strV);
 
         BSa b = new BSa(CP,Pr,S,K,T,sigma,r,y);
 //DSa dsa=new DSa();
-        x1=dsa.getTs(b.iv1());
-//System.out.println("call"+b.call());
+        xPr=dsa.getTs(b.call());
+        xDelta=dsa.getTs(b.delta(CP));
+        xVega=dsa.getTs(b.vega());
+        xTheta=dsa.getTs(b.theta(CP));
+        //System.out.println("call"+b.call());
         //x1=dsa.getTs(b.call());
-        System.out.println("Call = "+x1);
+        System.out.println("Call = "+xPr);
 //x1="123";
-        tv = findViewById(R.id.tvoutP_BS);
-        tv.setText(x1);
+        tvBS = findViewById(R.id.tvoutP_BS);
+        tvBS.setText(xPr);
+        tvPr = findViewById(R.id.tvoutP_Pr2);
+        tvPr.setText(xPr);
+        tvDelta = findViewById(R.id.tvoutP_Delta2);
+        tvDelta.setText(xDelta);
+        tvVega = findViewById(R.id.tvoutP_Vega2);
+        tvVega.setText(xVega);
+        tvTheta = findViewById(R.id.tvoutP_theta2);
+        tvTheta.setText(xTheta);
+
 
     }
 
@@ -64,7 +89,7 @@ public class outP extends AppCompatActivity {
     public void click1(View v)
     {
         String x1;
-        tv = findViewById(R.id.tvoutP_BS);
+        //tv = findViewById(R.id.tvoutP_BS);
 
         //Date date=new Date();
         //System.out.println(date.toString());
