@@ -1,5 +1,6 @@
 package com.example.aaroninjava.opcalt;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,6 +17,23 @@ public class outP extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_out_p);
+
+        TextView tvS = findViewById(R.id.tvoutP_S2);
+        TextView tvK = findViewById(R.id.tvoutP_K2);
+        TextView tvT = findViewById(R.id.tvoutP_T2);
+        TextView tvV = findViewById(R.id.tvoutP_V2);
+        TextView tvr = findViewById(R.id.tvoutP_r2);
+        Intent it = getIntent();
+        String strS = it.getStringExtra("S");
+        String strK = it.getStringExtra("K");
+        String strT = it.getStringExtra("T");
+        String strV = it.getStringExtra("V");
+        String strr = it.getStringExtra("r");
+        tvS.setText(strS);
+        tvK.setText(strK);
+        tvT.setText(strT);
+        tvV.setText(strV);
+        tvr.setText(strr);
 
         String x1;
 
