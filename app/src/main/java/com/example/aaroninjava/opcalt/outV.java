@@ -9,7 +9,7 @@ import android.widget.TextView;
 public class outV extends AppCompatActivity {
 
     TextView tvBS;
-    TextView tvV;
+    TextView tvIV;
     TextView tvDelta;
     TextView tvVega;
     TextView tvTheta;
@@ -81,6 +81,14 @@ public class outV extends AppCompatActivity {
         tvBS = findViewById(R.id.tvoutV_BS);
         tvBS.setText(xIV);
 
+        tvIV = findViewById(R.id.tvoutV_IV2);
+        tvIV.setText(xIV);
+        tvDelta = findViewById(R.id.tvoutV_Delta2);
+        tvDelta.setText(xDelta);
+        tvVega = findViewById(R.id.tvoutV_Vega2);
+        tvVega.setText(xVega);
+        tvTheta = findViewById(R.id.tvoutV_theta2);
+        tvTheta.setText(xTheta);
     }
 
     public void click1(View v)
