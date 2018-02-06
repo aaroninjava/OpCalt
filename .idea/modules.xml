@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OpCalt.iml" filepath="$PROJECT_DIR$/OpCalt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OpCalt.iml" filepath="$PROJECT_DIR$/.idea/OpCalt.iml" />
+      <module fileurl="file://C:\Android\_BSop\OpCalt\OpCalt.iml" filepath="C:\Android\_BSop\OpCalt\OpCalt.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

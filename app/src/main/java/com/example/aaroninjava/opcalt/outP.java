@@ -16,24 +16,30 @@ public class outP extends AppCompatActivity {
 
     DSa dsa=new DSa();
     double Pr,S,K,T,sigma,r,y;
-    String CP;
+    String CP="C";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_out_p);
 
+        TextView tvCP = findViewById(R.id.tvoutP_CP2);
         TextView tvS = findViewById(R.id.tvoutP_S2);
         TextView tvK = findViewById(R.id.tvoutP_K2);
         TextView tvT = findViewById(R.id.tvoutP_T2);
         TextView tvV = findViewById(R.id.tvoutP_V2);
         TextView tvr = findViewById(R.id.tvoutP_r2);
+
         Intent it = getIntent();
+
+        String CP = it.getStringExtra("CPs");
         String strS = it.getStringExtra("S");
         String strK = it.getStringExtra("K");
         String strT = it.getStringExtra("T");
         String strV = it.getStringExtra("V");
         String strr = it.getStringExtra("r");
+
+        tvCP.setText(CP);
         tvS.setText(strS);
         tvK.setText(strK);
         tvT.setText(strT);
@@ -42,8 +48,8 @@ public class outP extends AppCompatActivity {
 
         String xPr,xDelta,xVega,xTheta;
 
-        CP="C";
-
+        //CP="C";
+        //CP="C";
         Pr=0.84;
 
         S=100;
