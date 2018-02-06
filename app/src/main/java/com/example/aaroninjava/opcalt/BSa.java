@@ -85,10 +85,10 @@ public class BSa {
         return puta;
     }
 
-    public double Op_value(String CP)
+    public double OP_value(String CP)
     {
         double OPv1;
-        if (CP=="Call")
+        if (CP=="C")
             { OPv1=call();}
         else
             {OPv1=put();}
@@ -101,7 +101,7 @@ public class BSa {
     public double delta(String CP)
     {
         double delta1;
-        if (CP=="Call")
+        if (CP=="C")
             {delta1 = Math.exp(-y * T) * cdf(d1);}
         else
             {delta1 = Math.exp(-y * T) * ( cdf(d1)-1 );}
@@ -132,7 +132,7 @@ public class BSa {
         //gamma1 = Math.exp(-y * T) * pdf(d1)/(S * sigma * Math.sqrt(T));
         //ctheta = ( -S * sigma * b1.pdfapa(d1)/(2*Math.sqrt(T) ) - r*K*Math.exp(-r*T) * b1.cdfapa(d2)) / 365 ;
         double theta1;
-        if (CP=="Call")
+        if (CP=="C")
             {theta1 = ( -S*sigma*pdf(d1) / (2*Math.sqrt(T))
                 -   r*K*Math.exp(-r*T) * cdf(d2)    )  ;}//要除以365天??
         else
@@ -146,7 +146,7 @@ public class BSa {
     public double rho(String CP)
     {
         double rho1;
-        if (CP=="Call")
+        if (CP=="C")
         {rho1 = rho1 = T * K * Math.exp(-r*T) * cdf(d2) ;}//要除以100% ?
         else
         {rho1 = -T * K * Math.exp(-r*T) * cdf(-d2);} //要除以100% ?

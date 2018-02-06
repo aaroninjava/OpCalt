@@ -16,7 +16,7 @@ public class outP extends AppCompatActivity {
 
     DSa dsa=new DSa();
     double Pr,S,K,T,sigma,r,y;
-    String CP="Call";
+    String OPs="C";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +39,12 @@ public class outP extends AppCompatActivity {
         String strV = it.getStringExtra("V");
         String strr = it.getStringExtra("r");
 
-        tvCP.setText(CP);
+        if (CP=="C")
+            { OPs="Call";}
+        else
+            { OPs="Put";}
+
+        tvCP.setText(OPs);
         tvS.setText(strS);
         tvK.setText(strK);
         tvT.setText(strT);
@@ -87,9 +92,7 @@ public class outP extends AppCompatActivity {
         tvTheta = findViewById(R.id.tvoutP_theta2);
         tvTheta.setText(xTheta);
 
-
     }
-
 
 
     public void click1(View v)
