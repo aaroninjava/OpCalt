@@ -46,12 +46,14 @@ public class BSa {
                 (r-y + sigma * sigma / 2)* T ) / (sigma * Math.sqrt(T));
         return ad11;
     }
+
     public double ad2()
     {
         double ad22;
         ad22 = ad1()- sigma * Math.sqrt(T) ;
         return ad22;
     }
+
     public double cdf(double x)
     {
         double cdf1;
@@ -64,6 +66,7 @@ public class BSa {
         pdf1=n1.density(x);
         return pdf1;
     }
+
     //Op_Cvalue = S * NorCdf(d1) - K * Exp(-r * T) * NorCdf(d2)
     public double call()
     {
@@ -73,6 +76,7 @@ public class BSa {
         calla=S*cdf(d1)- K*Math.exp(-r*T)* cdf(d2);
         return calla;
     }
+
     //Op_Pvalue = K * Exp(-r * T) * NorCdf(-d2) - S * NorCdf(-d1)
     public double put()
     {
@@ -80,18 +84,31 @@ public class BSa {
         puta=K*Math.exp(-r*T)* cdf(-d2) - S*cdf(-d1);
         return puta;
     }
+
+    public double Op_value(String CP)
+    {
+        double OPv1;
+        if (CP=="Call")
+            { OPv1=call();}
+        else
+            {OPv1=put();}
+        System.out.println("OP_value="+OPv1);
+        return OPv1;
+    }
+
     //cdelta = Math.exp(-y * T) * b1.cdfapa(d1);
     //public double deltaC()
     public double delta(String CP)
     {
         double delta1;
-        if (CP=="C")
-        {delta1 = Math.exp(-y * T) * cdf(d1);}
+        if (CP=="Call")
+            {delta1 = Math.exp(-y * T) * cdf(d1);}
         else
-        {delta1 = Math.exp(-y * T) * ( cdf(d1)-1 );}
+            {delta1 = Math.exp(-y * T) * ( cdf(d1)-1 );}
         System.out.println("delta="+delta1);
         return delta1;
     }
+
     public double gamma() //call.put相同
     {
         double gamma1;
@@ -99,6 +116,7 @@ public class BSa {
         System.out.println("gamma="+gamma1);
         return gamma1;
     }
+
     public double vega() //call.put相同..要除以100% ??
     {
         double vega1=0;
@@ -107,26 +125,28 @@ public class BSa {
         System.out.println("vega="+vega1);
         return vega1;
     }
+
     public double theta(String CP)
     {
         //double gamma1;
         //gamma1 = Math.exp(-y * T) * pdf(d1)/(S * sigma * Math.sqrt(T));
         //ctheta = ( -S * sigma * b1.pdfapa(d1)/(2*Math.sqrt(T) ) - r*K*Math.exp(-r*T) * b1.cdfapa(d2)) / 365 ;
         double theta1;
-        if (CP=="C")
-        {theta1 = ( -S*sigma*pdf(d1) / (2*Math.sqrt(T))
+        if (CP=="Call")
+            {theta1 = ( -S*sigma*pdf(d1) / (2*Math.sqrt(T))
                 -   r*K*Math.exp(-r*T) * cdf(d2)    )  ;}//要除以365天??
         else
-        {theta1 = ( -S*sigma*pdf(d1) / (2*Math.sqrt(T))
+            {theta1 = ( -S*sigma*pdf(d1) / (2*Math.sqrt(T))
                 +   r*K*Math.exp(-r*T) * cdf(-d2)    ) ;} //要除以365天??
         //ptheta = ( -S * sigma * b1.pdfapa(d1)/(2*Math.sqrt(T) ) + r*K*Math.exp(-r*T) * b1.cdfapa(-d2)) / 365 ;
         System.out.println("theta="+theta1);
         return theta1;
     }
+
     public double rho(String CP)
     {
         double rho1;
-        if (CP=="C")
+        if (CP=="Call")
         {rho1 = rho1 = T * K * Math.exp(-r*T) * cdf(d2) ;}//要除以100% ?
         else
         {rho1 = -T * K * Math.exp(-r*T) * cdf(-d2);} //要除以100% ?
@@ -168,6 +188,7 @@ public class BSa {
         //value=yx(std);
         this.sigma=std;
         //System.out.println("IV計算前 sigma="+this.sigma);
+
         value=call();
         //System.out.println("IV計算前 代入估計value="+value);
         err = Math.abs(value - Pr);
@@ -191,6 +212,7 @@ public class BSa {
             std = (sd1 + sd2) / 2;
             this.sigma=std;
             //value=yx(std);
+
             value=call();
             err = Math.abs(value - Pr);
             i=i+1;
@@ -205,6 +227,7 @@ public class BSa {
         //System.out.println("結果誤差="+err);
         return std;
     }
+
     public  static double yx(double x) {
         double yx1;
         yx1=x*x;

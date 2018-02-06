@@ -16,7 +16,7 @@ public class outP extends AppCompatActivity {
 
     DSa dsa=new DSa();
     double Pr,S,K,T,sigma,r,y;
-    String CP="C";
+    String CP="Call";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

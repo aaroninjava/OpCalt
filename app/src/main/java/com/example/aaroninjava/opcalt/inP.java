@@ -11,7 +11,7 @@ import android.widget.ToggleButton;
 public class inP extends AppCompatActivity {
 
     ToggleButton togP;
-    String CP="C";
+    String CP="Call";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +27,12 @@ public class inP extends AppCompatActivity {
                 // 當按鈕第一次被點擊時候響應的事件
                 if (togP.isChecked()) {
                     Toast.makeText(inP.this, "Put", Toast.LENGTH_SHORT).show();
-                    CP="P";
+                    CP="Put";
                 }
                 // 當按鈕再次被點擊時候響應的事件
                 else {
                     Toast.makeText(inP.this, "Call", Toast.LENGTH_SHORT).show();
-                    CP="C";
+                    CP="Call";
                 }
             }
 
