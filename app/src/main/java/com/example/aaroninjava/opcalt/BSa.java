@@ -123,7 +123,7 @@ public class BSa {
         //gamma1 = Math.exp(-y * T) * pdf(d1)/(S * sigma * Math.sqrt(T));
         vega1 =  S * Math.exp(-y*T) * pdf(d1) * Math.sqrt(T)  ;
         System.out.println("vega="+vega1);
-        return vega1;
+        return vega1/100;
     }
 
     public double theta(String CP)
@@ -140,7 +140,7 @@ public class BSa {
                 +   r*K*Math.exp(-r*T) * cdf(-d2)    ) ;} //要除以365天??
         //ptheta = ( -S * sigma * b1.pdfapa(d1)/(2*Math.sqrt(T) ) + r*K*Math.exp(-r*T) * b1.cdfapa(-d2)) / 365 ;
         System.out.println("theta="+theta1);
-        return theta1;
+        return theta1/365;
     }
 
     public double rho(String CP)

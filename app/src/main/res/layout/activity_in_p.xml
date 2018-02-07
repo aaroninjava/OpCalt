@@ -110,7 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="到期履約的標的價格，台指選擇權標的為加權指數" />
+                    android:text="標的價格，台指選擇權標的為加權指數" />
             </LinearLayout>
 
         </LinearLayout>
@@ -142,7 +142,7 @@
                     android:background="@null"
                     android:ems="10"
                     android:gravity="center"
-                    android:hint="110"
+                    android:hint="10404"
                     android:inputType="numberDecimal"
                     android:textAppearance="@android:style/TextAppearance.Material.Headline"
                     tools:background="null"
