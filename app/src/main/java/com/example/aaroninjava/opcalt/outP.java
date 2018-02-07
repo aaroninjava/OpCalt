@@ -63,13 +63,13 @@ public class outP extends AppCompatActivity {
         K=110;
         K=dsa.getDs(strK);
         T=0.1;
-        T=dsa.getDs(strT);
+        T=(dsa.getDs(strT))/365;
         r=0.01;
-        r=dsa.getDs(strr);
+        r=(dsa.getDs(strr))/100;
         y=0;
 
         sigma=0.3;
-        sigma=dsa.getDs(strV);
+        sigma=(dsa.getDs(strV))/100;
 
         BSa b = new BSa(CP,Pr,S,K,T,sigma,r,y);
 //DSa dsa=new DSa();

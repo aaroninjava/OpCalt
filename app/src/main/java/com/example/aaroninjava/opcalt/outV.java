@@ -59,17 +59,17 @@ public class outV extends AppCompatActivity {
         K=dsa.getDs(strK);
 
         T=0.1;
-        T=dsa.getDs(strT);
+        T=(dsa.getDs(strT))/365;
 
         r=0.01;
-        r=dsa.getDs(strr);
+        r=(dsa.getDs(strr))/100;
         y=0;
 
         sigma=0.3;
 
         BSa b = new BSa(CP,Pr,S,K,T,sigma,r,y);
 //DSa dsa=new DSa();
-        xIV=dsa.getTs(b.iv1());
+        xIV=dsa.getTs(100*b.iv1());
         xDelta=dsa.getTs(b.delta(CP));
         xVega=dsa.getTs(b.vega());
         xTheta=dsa.getTs(b.theta(CP));
